@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+
+ package smartkitchen;
+
+  option java_multiple_files = true;
+  option java_package = "com.matthewmurphy.smartfridge";
+  option java_outer_classname = "SmartKitchenFridgeImpl";
+
+
+    service smartFridge{
+        rpc switchOn(Empty) returns (statusOfSwitches){}
+        rpc switchOff(Empty) returns (statusOfSwitches) {}
+        rpc doorOpen(statusOfDoor) returns (statusOfDoor) {}
+        rpc doorClosed(statusOfDoor) returns (statusOfDoor) {}
+        rpc fridgeItems(stream itemsInFridge) returns ( stream numResponse) {}
+     
+        
+   
+  
+    }
+
+    message statusOfSwitches{
+
+    bool switchStatus = 1; 
+    string statusMsg = 2;
+
+    }
+    
+    message itemsInFridge{
+    
+    string items = 1;
+    string statusMsg = 2;
+    
+    }
+    
+    message numResponse {
+	 	string items = 1;
+	 	string statusMsg = 2;
+	}
+    
+    
+    message statusOfDoor{
+    
+    bool status = 1;
+    string statusOfDoorMsg = 2;
+    }
+
+    
+
+    message Empty{
+
+    }

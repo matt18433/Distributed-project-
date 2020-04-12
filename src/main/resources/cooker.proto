@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+
+ package smartkitchen;
+
+  option java_multiple_files = true;
+  option java_package = "com.matthewmurphy.smartcooker";
+  option java_outer_classname = "SmartKitchenCookerImpl";
+
+
+    service smartCooker{
+        rpc switchOn(Empty) returns (statusOfSwitches){}
+        rpc switchOff(Empty) returns (statusOfSwitches) {}
+        rpc heatingOn(Empty) returns (heatingStatus) {}
+        rpc heatingOff(Empty) returns (heatingStatus) {}
+      
+    }
+
+    message statusOfSwitches{
+
+    bool switchStatus = 1;
+    string statusMsg = 2; 
+
+    }
+
+
+    message heatingStatus{
+
+    bool heatingONOFF = 1;
+    string statusMsg = 2;
+    
+
+    }
+
+    
+
+    message Empty{
+
+    }

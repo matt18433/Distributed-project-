@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+
+ package smartkitchen;
+
+  option java_multiple_files = true;
+  option java_package = "com.matthewmurphy.smartwashingmachine";
+  option java_outer_classname = "SmartKitchenWashingmachineImpl";
+
+
+    service washingMachine{
+        rpc switchOn(Empty) returns (statusOfSwitches){}
+        rpc switchOff(Empty) returns (statusOfSwitches) {}
+        rpc doorOpen(statusOfDoor) returns (statusOfDoor) {}
+        rpc doorClosed(statusOfDoor) returns (statusOfDoor) {}
+        rpc changeWashType(washRequest) returns (stream washResponse) {}
+        
+       
+    }
+
+    message statusOfSwitches{
+
+    bool switchStatus = 1; 
+    string statusMsg = 2;
+
+    }
+    
+    message statusOfDoor{
+    
+    bool openONOff = 1;
+    string statusOfDoorMsg = 2;
+    }
+    
+    message washResponse{
+    
+    int32 wash = 1;
+    string statusMsg = 2;
+    
+    }
+    
+    message washRequest{
+    
+    int32 wash = 1;
+    string statusMsg = 2;
+    
+    }
+
+    message Empty{
+
+    }
