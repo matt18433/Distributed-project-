@@ -11,14 +11,4 @@ public interface washRequestOrBuilder extends
    * <code>int32 wash = 1;</code>
    */
   int getWash();
-
-  /**
-   * <code>string statusMsg = 2;</code>
-   */
-  java.lang.String getStatusMsg();
-  /**
-   * <code>string statusMsg = 2;</code>
-   */
-  com.google.protobuf.ByteString
-      getStatusMsgBytes();
 }

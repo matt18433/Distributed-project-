@@ -33,6 +33,8 @@ public class WashingMachineServer extends washingMachineImplBase {
 	
 	 private boolean statusOf_Door = false;
 	 private boolean activeMachine = false;
+	 
+	 
 		public void switchOn(Empty request,
 		         io.grpc.stub.StreamObserver<statusOfSwitches> response) {
 				activeMachine = true;
@@ -55,7 +57,7 @@ public class WashingMachineServer extends washingMachineImplBase {
 		         response.onCompleted();
 		     }
 		
-		
+		//Stating that door is open and user should take the following action
 		public void doorOpen(statusOfDoor request,
 				io.grpc.stub.StreamObserver<statusOfDoor>response) {
 			
@@ -67,6 +69,7 @@ public class WashingMachineServer extends washingMachineImplBase {
 			response.onCompleted();				
 		}
 		
+		//Stating that door is now closed suer can proceed to choose wash
 		public void doorClosed(statusOfDoor request,
 				io.grpc.stub.StreamObserver<statusOfDoor>response) {
 			
@@ -80,7 +83,7 @@ public class WashingMachineServer extends washingMachineImplBase {
 		
 		public void changeWashType(washRequest request, StreamObserver<washResponse> responseObserver) {
 			
-			
+			//Requesting to get the type of wash then returning a response to the user 
 			int washing = request.getWash();
 			System.out.println("Change duration of wash...." + "the wash duration is now " + washing +" minutes");
 			System.out.println("You can now continue your day and wait for wash");

@@ -11,14 +11,4 @@ public interface statusOfSwitchesOrBuilder extends
    * <code>bool switchStatus = 1;</code>
    */
   boolean getSwitchStatus();
-
-  /**
-   * <code>string statusMsg = 2;</code>
-   */
-  java.lang.String getStatusMsg();
-  /**
-   * <code>string statusMsg = 2;</code>
-   */
-  com.google.protobuf.ByteString
-      getStatusMsgBytes();
 }

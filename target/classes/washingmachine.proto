@@ -21,7 +21,7 @@ syntax = "proto3";
     message statusOfSwitches{
 
     bool switchStatus = 1; 
-    string statusMsg = 2;
+    
 
     }
     
@@ -29,19 +29,20 @@ syntax = "proto3";
     
     bool openONOff = 1;
     string statusOfDoorMsg = 2;
+    
     }
     
     message washResponse{
     
     int32 wash = 1;
-    string statusMsg = 2;
+    
     
     }
     
     message washRequest{
     
     int32 wash = 1;
-    string statusMsg = 2;
+    
     
     }
 

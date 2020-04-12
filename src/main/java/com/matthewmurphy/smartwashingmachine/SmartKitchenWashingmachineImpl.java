@@ -48,24 +48,23 @@ public final class SmartKitchenWashingmachineImpl {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\024washingmachine.proto\022\014smartkitchen\";\n\020" +
-      "statusOfSwitches\022\024\n\014switchStatus\030\001 \001(\010\022\021" +
-      "\n\tstatusMsg\030\002 \001(\t\":\n\014statusOfDoor\022\021\n\tope" +
-      "nONOff\030\001 \001(\010\022\027\n\017statusOfDoorMsg\030\002 \001(\t\"/\n" +
-      "\014washResponse\022\014\n\004wash\030\001 \001(\005\022\021\n\tstatusMsg" +
-      "\030\002 \001(\t\".\n\013washRequest\022\014\n\004wash\030\001 \001(\005\022\021\n\ts" +
-      "tatusMsg\030\002 \001(\t\"\007\n\005Empty2\362\002\n\016washingMachi" +
-      "ne\022A\n\010switchOn\022\023.smartkitchen.Empty\032\036.sm" +
-      "artkitchen.statusOfSwitches\"\000\022B\n\tswitchO" +
-      "ff\022\023.smartkitchen.Empty\032\036.smartkitchen.s" +
-      "tatusOfSwitches\"\000\022D\n\010doorOpen\022\032.smartkit" +
-      "chen.statusOfDoor\032\032.smartkitchen.statusO" +
-      "fDoor\"\000\022F\n\ndoorClosed\022\032.smartkitchen.sta" +
-      "tusOfDoor\032\032.smartkitchen.statusOfDoor\"\000\022" +
-      "K\n\016changeWashType\022\031.smartkitchen.washReq" +
-      "uest\032\032.smartkitchen.washResponse\"\0000\001BI\n%" +
-      "com.matthewmurphy.smartwashingmachineB\036S" +
-      "martKitchenWashingmachineImplP\001b\006proto3"
+      "\n\024washingmachine.proto\022\014smartkitchen\"(\n\020" +
+      "statusOfSwitches\022\024\n\014switchStatus\030\001 \001(\010\":" +
+      "\n\014statusOfDoor\022\021\n\topenONOff\030\001 \001(\010\022\027\n\017sta" +
+      "tusOfDoorMsg\030\002 \001(\t\"\034\n\014washResponse\022\014\n\004wa" +
+      "sh\030\001 \001(\005\"\033\n\013washRequest\022\014\n\004wash\030\001 \001(\005\"\007\n" +
+      "\005Empty2\362\002\n\016washingMachine\022A\n\010switchOn\022\023." +
+      "smartkitchen.Empty\032\036.smartkitchen.status" +
+      "OfSwitches\"\000\022B\n\tswitchOff\022\023.smartkitchen" +
+      ".Empty\032\036.smartkitchen.statusOfSwitches\"\000" +
+      "\022D\n\010doorOpen\022\032.smartkitchen.statusOfDoor" +
+      "\032\032.smartkitchen.statusOfDoor\"\000\022F\n\ndoorCl" +
+      "osed\022\032.smartkitchen.statusOfDoor\032\032.smart" +
+      "kitchen.statusOfDoor\"\000\022K\n\016changeWashType" +
+      "\022\031.smartkitchen.washRequest\032\032.smartkitch" +
+      "en.washResponse\"\0000\001BI\n%com.matthewmurphy" +
+      ".smartwashingmachineB\036SmartKitchenWashin" +
+      "gmachineImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -84,7 +83,7 @@ public final class SmartKitchenWashingmachineImpl {
     internal_static_smartkitchen_statusOfSwitches_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_smartkitchen_statusOfSwitches_descriptor,
-        new java.lang.String[] { "SwitchStatus", "StatusMsg", });
+        new java.lang.String[] { "SwitchStatus", });
     internal_static_smartkitchen_statusOfDoor_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_smartkitchen_statusOfDoor_fieldAccessorTable = new
@@ -96,13 +95,13 @@ public final class SmartKitchenWashingmachineImpl {
     internal_static_smartkitchen_washResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_smartkitchen_washResponse_descriptor,
-        new java.lang.String[] { "Wash", "StatusMsg", });
+        new java.lang.String[] { "Wash", });
     internal_static_smartkitchen_washRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_smartkitchen_washRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_smartkitchen_washRequest_descriptor,
-        new java.lang.String[] { "Wash", "StatusMsg", });
+        new java.lang.String[] { "Wash", });
     internal_static_smartkitchen_Empty_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_smartkitchen_Empty_fieldAccessorTable = new

@@ -81,12 +81,12 @@ public class FridgeServer extends smartFridgeImplBase {
 	public StreamObserver<itemsInFridge> fridgeItems(final StreamObserver<itemsResponse> responseObserver) {
 		return new StreamObserver<itemsInFridge>() {
 			public void onNext(itemsInFridge request) {
-				StringBuilder returns = new StringBuilder();
+				StringBuilder items = new StringBuilder();
 
-				returns.append(request.getItems());
-				System.out.println(returns);
+				items.append(request.getItems());
+				System.out.println(items);
 
-				itemsResponse reply = itemsResponse.newBuilder().setItems(returns.toString()).build();
+				itemsResponse reply = itemsResponse.newBuilder().setItems(items.toString()).build();
 
 				responseObserver.onNext(reply);
 			}

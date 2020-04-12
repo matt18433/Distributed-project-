@@ -9,6 +9,7 @@ import com.matthewmurphy.smartfridge.smartFridgeGrpc;
 import com.matthewmurphy.smartfridge.Empty;
 import com.matthewmurphy.smartfridge.statusOfSwitches;
 import com.matthewmurphy.smartfridge.statusOfDoor;
+import com.matthewmurphy.smartfridge.itemsInFridge;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
@@ -67,7 +68,7 @@ public class FridgeClient {
 	}
 	public static void doorOpen() {
 
-		System.out.println("The door is open waiting for clothes to be inserted");
+		System.out.println("The door is open take what you would like");
 
 		try {
 			statusOfDoor status = statusOfDoor.newBuilder().build();
@@ -81,7 +82,7 @@ public class FridgeClient {
 
 	public static void doorClosed() {
 
-		System.out.println("The door is closed waiting for user to select what type of wash they want");
+		System.out.println("The door is closed");
 
 		try {
 			statusOfDoor status = statusOfDoor.newBuilder().build();
