@@ -3,8 +3,8 @@
 
 package com.matthewmurphy.smartfridge;
 
-public interface itemsInFridgeOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:smartkitchen.itemsInFridge)
+public interface itemsResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:smartkitchen.itemsResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

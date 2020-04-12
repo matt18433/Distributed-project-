@@ -13,7 +13,7 @@ syntax = "proto3";
         rpc switchOff(Empty) returns (statusOfSwitches) {}
         rpc doorOpen(statusOfDoor) returns (statusOfDoor) {}
         rpc doorClosed(statusOfDoor) returns (statusOfDoor) {}
-        rpc fridgeItems(stream itemsInFridge) returns ( stream numResponse) {}
+        rpc fridgeItems(stream itemsInFridge) returns ( stream itemsResponse) {}
      
         
    
@@ -23,20 +23,20 @@ syntax = "proto3";
     message statusOfSwitches{
 
     bool switchStatus = 1; 
-    string statusMsg = 2;
+    
 
     }
     
     message itemsInFridge{
     
     string items = 1;
-    string statusMsg = 2;
+   
     
     }
     
-    message numResponse {
+    message itemsResponse {
 	 	string items = 1;
-	 	string statusMsg = 2;
+	 	
 	}
     
     

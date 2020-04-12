@@ -19,7 +19,7 @@ syntax = "proto3";
     message statusOfSwitches{
 
     bool switchStatus = 1;
-    string statusMsg = 2; 
+    
 
     }
 
@@ -27,7 +27,7 @@ syntax = "proto3";
     message heatingStatus{
 
     bool heatingONOFF = 1;
-    string statusMsg = 2;
+    
     
 
     }

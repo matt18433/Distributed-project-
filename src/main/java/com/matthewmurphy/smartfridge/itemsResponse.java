@@ -4,20 +4,19 @@
 package com.matthewmurphy.smartfridge;
 
 /**
- * Protobuf type {@code smartkitchen.numResponse}
+ * Protobuf type {@code smartkitchen.itemsResponse}
  */
-public  final class numResponse extends
+public  final class itemsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:smartkitchen.numResponse)
-    numResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:smartkitchen.itemsResponse)
+    itemsResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use numResponse.newBuilder() to construct.
-  private numResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use itemsResponse.newBuilder() to construct.
+  private itemsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private numResponse() {
+  private itemsResponse() {
     items_ = "";
-    statusMsg_ = "";
   }
 
   @java.lang.Override
@@ -25,7 +24,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private numResponse(
+  private itemsResponse(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -50,12 +49,6 @@ private static final long serialVersionUID = 0L;
             items_ = s;
             break;
           }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            statusMsg_ = s;
-            break;
-          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -77,15 +70,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.matthewmurphy.smartfridge.SmartKitchenFridgeImpl.internal_static_smartkitchen_numResponse_descriptor;
+    return com.matthewmurphy.smartfridge.SmartKitchenFridgeImpl.internal_static_smartkitchen_itemsResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.matthewmurphy.smartfridge.SmartKitchenFridgeImpl.internal_static_smartkitchen_numResponse_fieldAccessorTable
+    return com.matthewmurphy.smartfridge.SmartKitchenFridgeImpl.internal_static_smartkitchen_itemsResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.matthewmurphy.smartfridge.numResponse.class, com.matthewmurphy.smartfridge.numResponse.Builder.class);
+            com.matthewmurphy.smartfridge.itemsResponse.class, com.matthewmurphy.smartfridge.itemsResponse.Builder.class);
   }
 
   public static final int ITEMS_FIELD_NUMBER = 1;
@@ -122,40 +115,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int STATUSMSG_FIELD_NUMBER = 2;
-  private volatile java.lang.Object statusMsg_;
-  /**
-   * <code>string statusMsg = 2;</code>
-   */
-  public java.lang.String getStatusMsg() {
-    java.lang.Object ref = statusMsg_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      statusMsg_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string statusMsg = 2;</code>
-   */
-  public com.google.protobuf.ByteString
-      getStatusMsgBytes() {
-    java.lang.Object ref = statusMsg_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      statusMsg_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -173,9 +132,6 @@ private static final long serialVersionUID = 0L;
     if (!getItemsBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, items_);
     }
-    if (!getStatusMsgBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, statusMsg_);
-    }
     unknownFields.writeTo(output);
   }
 
@@ -188,9 +144,6 @@ private static final long serialVersionUID = 0L;
     if (!getItemsBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, items_);
     }
-    if (!getStatusMsgBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, statusMsg_);
-    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -201,16 +154,14 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.matthewmurphy.smartfridge.numResponse)) {
+    if (!(obj instanceof com.matthewmurphy.smartfridge.itemsResponse)) {
       return super.equals(obj);
     }
-    com.matthewmurphy.smartfridge.numResponse other = (com.matthewmurphy.smartfridge.numResponse) obj;
+    com.matthewmurphy.smartfridge.itemsResponse other = (com.matthewmurphy.smartfridge.itemsResponse) obj;
 
     boolean result = true;
     result = result && getItems()
         .equals(other.getItems());
-    result = result && getStatusMsg()
-        .equals(other.getStatusMsg());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -224,76 +175,74 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ITEMS_FIELD_NUMBER;
     hash = (53 * hash) + getItems().hashCode();
-    hash = (37 * hash) + STATUSMSG_FIELD_NUMBER;
-    hash = (53 * hash) + getStatusMsg().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.matthewmurphy.smartfridge.numResponse parseFrom(
+  public static com.matthewmurphy.smartfridge.itemsResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.matthewmurphy.smartfridge.numResponse parseFrom(
+  public static com.matthewmurphy.smartfridge.itemsResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.matthewmurphy.smartfridge.numResponse parseFrom(
+  public static com.matthewmurphy.smartfridge.itemsResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.matthewmurphy.smartfridge.numResponse parseFrom(
+  public static com.matthewmurphy.smartfridge.itemsResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.matthewmurphy.smartfridge.numResponse parseFrom(byte[] data)
+  public static com.matthewmurphy.smartfridge.itemsResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.matthewmurphy.smartfridge.numResponse parseFrom(
+  public static com.matthewmurphy.smartfridge.itemsResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.matthewmurphy.smartfridge.numResponse parseFrom(java.io.InputStream input)
+  public static com.matthewmurphy.smartfridge.itemsResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.matthewmurphy.smartfridge.numResponse parseFrom(
+  public static com.matthewmurphy.smartfridge.itemsResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.matthewmurphy.smartfridge.numResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.matthewmurphy.smartfridge.itemsResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.matthewmurphy.smartfridge.numResponse parseDelimitedFrom(
+  public static com.matthewmurphy.smartfridge.itemsResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.matthewmurphy.smartfridge.numResponse parseFrom(
+  public static com.matthewmurphy.smartfridge.itemsResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.matthewmurphy.smartfridge.numResponse parseFrom(
+  public static com.matthewmurphy.smartfridge.itemsResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -306,7 +255,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.matthewmurphy.smartfridge.numResponse prototype) {
+  public static Builder newBuilder(com.matthewmurphy.smartfridge.itemsResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -322,26 +271,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code smartkitchen.numResponse}
+   * Protobuf type {@code smartkitchen.itemsResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:smartkitchen.numResponse)
-      com.matthewmurphy.smartfridge.numResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:smartkitchen.itemsResponse)
+      com.matthewmurphy.smartfridge.itemsResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.matthewmurphy.smartfridge.SmartKitchenFridgeImpl.internal_static_smartkitchen_numResponse_descriptor;
+      return com.matthewmurphy.smartfridge.SmartKitchenFridgeImpl.internal_static_smartkitchen_itemsResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.matthewmurphy.smartfridge.SmartKitchenFridgeImpl.internal_static_smartkitchen_numResponse_fieldAccessorTable
+      return com.matthewmurphy.smartfridge.SmartKitchenFridgeImpl.internal_static_smartkitchen_itemsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.matthewmurphy.smartfridge.numResponse.class, com.matthewmurphy.smartfridge.numResponse.Builder.class);
+              com.matthewmurphy.smartfridge.itemsResponse.class, com.matthewmurphy.smartfridge.itemsResponse.Builder.class);
     }
 
-    // Construct using com.matthewmurphy.smartfridge.numResponse.newBuilder()
+    // Construct using com.matthewmurphy.smartfridge.itemsResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -361,25 +310,23 @@ private static final long serialVersionUID = 0L;
       super.clear();
       items_ = "";
 
-      statusMsg_ = "";
-
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.matthewmurphy.smartfridge.SmartKitchenFridgeImpl.internal_static_smartkitchen_numResponse_descriptor;
+      return com.matthewmurphy.smartfridge.SmartKitchenFridgeImpl.internal_static_smartkitchen_itemsResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.matthewmurphy.smartfridge.numResponse getDefaultInstanceForType() {
-      return com.matthewmurphy.smartfridge.numResponse.getDefaultInstance();
+    public com.matthewmurphy.smartfridge.itemsResponse getDefaultInstanceForType() {
+      return com.matthewmurphy.smartfridge.itemsResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.matthewmurphy.smartfridge.numResponse build() {
-      com.matthewmurphy.smartfridge.numResponse result = buildPartial();
+    public com.matthewmurphy.smartfridge.itemsResponse build() {
+      com.matthewmurphy.smartfridge.itemsResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -387,10 +334,9 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.matthewmurphy.smartfridge.numResponse buildPartial() {
-      com.matthewmurphy.smartfridge.numResponse result = new com.matthewmurphy.smartfridge.numResponse(this);
+    public com.matthewmurphy.smartfridge.itemsResponse buildPartial() {
+      com.matthewmurphy.smartfridge.itemsResponse result = new com.matthewmurphy.smartfridge.itemsResponse(this);
       result.items_ = items_;
-      result.statusMsg_ = statusMsg_;
       onBuilt();
       return result;
     }
@@ -429,22 +375,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.matthewmurphy.smartfridge.numResponse) {
-        return mergeFrom((com.matthewmurphy.smartfridge.numResponse)other);
+      if (other instanceof com.matthewmurphy.smartfridge.itemsResponse) {
+        return mergeFrom((com.matthewmurphy.smartfridge.itemsResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.matthewmurphy.smartfridge.numResponse other) {
-      if (other == com.matthewmurphy.smartfridge.numResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.matthewmurphy.smartfridge.itemsResponse other) {
+      if (other == com.matthewmurphy.smartfridge.itemsResponse.getDefaultInstance()) return this;
       if (!other.getItems().isEmpty()) {
         items_ = other.items_;
-        onChanged();
-      }
-      if (!other.getStatusMsg().isEmpty()) {
-        statusMsg_ = other.statusMsg_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -462,11 +404,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.matthewmurphy.smartfridge.numResponse parsedMessage = null;
+      com.matthewmurphy.smartfridge.itemsResponse parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.matthewmurphy.smartfridge.numResponse) e.getUnfinishedMessage();
+        parsedMessage = (com.matthewmurphy.smartfridge.itemsResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -544,75 +486,6 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
-
-    private java.lang.Object statusMsg_ = "";
-    /**
-     * <code>string statusMsg = 2;</code>
-     */
-    public java.lang.String getStatusMsg() {
-      java.lang.Object ref = statusMsg_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        statusMsg_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string statusMsg = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getStatusMsgBytes() {
-      java.lang.Object ref = statusMsg_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        statusMsg_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string statusMsg = 2;</code>
-     */
-    public Builder setStatusMsg(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      statusMsg_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string statusMsg = 2;</code>
-     */
-    public Builder clearStatusMsg() {
-      
-      statusMsg_ = getDefaultInstance().getStatusMsg();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string statusMsg = 2;</code>
-     */
-    public Builder setStatusMsgBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      statusMsg_ = value;
-      onChanged();
-      return this;
-    }
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -626,41 +499,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:smartkitchen.numResponse)
+    // @@protoc_insertion_point(builder_scope:smartkitchen.itemsResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:smartkitchen.numResponse)
-  private static final com.matthewmurphy.smartfridge.numResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:smartkitchen.itemsResponse)
+  private static final com.matthewmurphy.smartfridge.itemsResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.matthewmurphy.smartfridge.numResponse();
+    DEFAULT_INSTANCE = new com.matthewmurphy.smartfridge.itemsResponse();
   }
 
-  public static com.matthewmurphy.smartfridge.numResponse getDefaultInstance() {
+  public static com.matthewmurphy.smartfridge.itemsResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<numResponse>
-      PARSER = new com.google.protobuf.AbstractParser<numResponse>() {
+  private static final com.google.protobuf.Parser<itemsResponse>
+      PARSER = new com.google.protobuf.AbstractParser<itemsResponse>() {
     @java.lang.Override
-    public numResponse parsePartialFrom(
+    public itemsResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new numResponse(input, extensionRegistry);
+      return new itemsResponse(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<numResponse> parser() {
+  public static com.google.protobuf.Parser<itemsResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<numResponse> getParserForType() {
+  public com.google.protobuf.Parser<itemsResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.matthewmurphy.smartfridge.numResponse getDefaultInstanceForType() {
+  public com.matthewmurphy.smartfridge.itemsResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

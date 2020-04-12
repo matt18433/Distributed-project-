@@ -96,10 +96,10 @@ public class FridgeClient {
 	
 	public static void fridgeItems(){
 
-		StreamObserver<numResponse> responseObserver = new StreamObserver<numResponse>() {
+		StreamObserver<itemsResponse> responseObserver = new StreamObserver<itemsResponse>() {
 
 			@Override
-			public void onNext(numResponse value) {
+			public void onNext(itemsResponse value) {
 				System.out.println("The items in the fridge are: " + value.getItems());
 			}
 

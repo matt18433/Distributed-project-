@@ -11,14 +11,4 @@ public interface heatingStatusOrBuilder extends
    * <code>bool heatingONOFF = 1;</code>
    */
   boolean getHeatingONOFF();
-
-  /**
-   * <code>string statusMsg = 2;</code>
-   */
-  java.lang.String getStatusMsg();
-  /**
-   * <code>string statusMsg = 2;</code>
-   */
-  com.google.protobuf.ByteString
-      getStatusMsgBytes();
 }

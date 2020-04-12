@@ -17,7 +17,6 @@ private static final long serialVersionUID = 0L;
   }
   private heatingStatus() {
     heatingONOFF_ = false;
-    statusMsg_ = "";
   }
 
   @java.lang.Override
@@ -47,12 +46,6 @@ private static final long serialVersionUID = 0L;
           case 8: {
 
             heatingONOFF_ = input.readBool();
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            statusMsg_ = s;
             break;
           }
           default: {
@@ -96,40 +89,6 @@ private static final long serialVersionUID = 0L;
     return heatingONOFF_;
   }
 
-  public static final int STATUSMSG_FIELD_NUMBER = 2;
-  private volatile java.lang.Object statusMsg_;
-  /**
-   * <code>string statusMsg = 2;</code>
-   */
-  public java.lang.String getStatusMsg() {
-    java.lang.Object ref = statusMsg_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      statusMsg_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string statusMsg = 2;</code>
-   */
-  public com.google.protobuf.ByteString
-      getStatusMsgBytes() {
-    java.lang.Object ref = statusMsg_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      statusMsg_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -147,9 +106,6 @@ private static final long serialVersionUID = 0L;
     if (heatingONOFF_ != false) {
       output.writeBool(1, heatingONOFF_);
     }
-    if (!getStatusMsgBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, statusMsg_);
-    }
     unknownFields.writeTo(output);
   }
 
@@ -162,9 +118,6 @@ private static final long serialVersionUID = 0L;
     if (heatingONOFF_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, heatingONOFF_);
-    }
-    if (!getStatusMsgBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, statusMsg_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -184,8 +137,6 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && (getHeatingONOFF()
         == other.getHeatingONOFF());
-    result = result && getStatusMsg()
-        .equals(other.getStatusMsg());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -200,8 +151,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + HEATINGONOFF_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getHeatingONOFF());
-    hash = (37 * hash) + STATUSMSG_FIELD_NUMBER;
-    hash = (53 * hash) + getStatusMsg().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -337,8 +286,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       heatingONOFF_ = false;
 
-      statusMsg_ = "";
-
       return this;
     }
 
@@ -366,7 +313,6 @@ private static final long serialVersionUID = 0L;
     public com.matthewmurphy.smartcooker.heatingStatus buildPartial() {
       com.matthewmurphy.smartcooker.heatingStatus result = new com.matthewmurphy.smartcooker.heatingStatus(this);
       result.heatingONOFF_ = heatingONOFF_;
-      result.statusMsg_ = statusMsg_;
       onBuilt();
       return result;
     }
@@ -417,10 +363,6 @@ private static final long serialVersionUID = 0L;
       if (other == com.matthewmurphy.smartcooker.heatingStatus.getDefaultInstance()) return this;
       if (other.getHeatingONOFF() != false) {
         setHeatingONOFF(other.getHeatingONOFF());
-      }
-      if (!other.getStatusMsg().isEmpty()) {
-        statusMsg_ = other.statusMsg_;
-        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -473,75 +415,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearHeatingONOFF() {
       
       heatingONOFF_ = false;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object statusMsg_ = "";
-    /**
-     * <code>string statusMsg = 2;</code>
-     */
-    public java.lang.String getStatusMsg() {
-      java.lang.Object ref = statusMsg_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        statusMsg_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string statusMsg = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getStatusMsgBytes() {
-      java.lang.Object ref = statusMsg_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        statusMsg_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string statusMsg = 2;</code>
-     */
-    public Builder setStatusMsg(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      statusMsg_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string statusMsg = 2;</code>
-     */
-    public Builder clearStatusMsg() {
-      
-      statusMsg_ = getDefaultInstance().getStatusMsg();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string statusMsg = 2;</code>
-     */
-    public Builder setStatusMsgBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      statusMsg_ = value;
       onChanged();
       return this;
     }

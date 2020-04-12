@@ -8,7 +8,7 @@ import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
 import com.matthewmurphy.smartfridge.itemsInFridge;
-import com.matthewmurphy.smartfridge.numResponse;
+import com.matthewmurphy.smartfridge.itemsResponse;
 import io.grpc.stub.StreamObserver;
 
 import com.matthewmurphy.smartfridge.smartFridgeGrpc.smartFridgeImplBase;
@@ -78,7 +78,7 @@ public class FridgeServer extends smartFridgeImplBase {
 		response.onCompleted();
 	}
 
-	public StreamObserver<itemsInFridge> fridgeItems(final StreamObserver<numResponse> responseObserver) {
+	public StreamObserver<itemsInFridge> fridgeItems(final StreamObserver<itemsResponse> responseObserver) {
 		return new StreamObserver<itemsInFridge>() {
 			public void onNext(itemsInFridge request) {
 				StringBuilder returns = new StringBuilder();
@@ -86,7 +86,7 @@ public class FridgeServer extends smartFridgeImplBase {
 				returns.append(request.getItems());
 				System.out.println(returns);
 
-				numResponse reply = numResponse.newBuilder().setItems(returns.toString()).build();
+				itemsResponse reply = itemsResponse.newBuilder().setItems(returns.toString()).build();
 
 				responseObserver.onNext(reply);
 			}

@@ -38,19 +38,18 @@ public final class SmartKitchenCookerImpl {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014cooker.proto\022\014smartkitchen\";\n\020statusOf" +
-      "Switches\022\024\n\014switchStatus\030\001 \001(\010\022\021\n\tstatus" +
-      "Msg\030\002 \001(\t\"8\n\rheatingStatus\022\024\n\014heatingONO" +
-      "FF\030\001 \001(\010\022\021\n\tstatusMsg\030\002 \001(\t\"\007\n\005Empty2\227\002\n" +
-      "\013smartCooker\022A\n\010switchOn\022\023.smartkitchen." +
-      "Empty\032\036.smartkitchen.statusOfSwitches\"\000\022" +
-      "B\n\tswitchOff\022\023.smartkitchen.Empty\032\036.smar" +
-      "tkitchen.statusOfSwitches\"\000\022?\n\theatingOn" +
-      "\022\023.smartkitchen.Empty\032\033.smartkitchen.hea" +
-      "tingStatus\"\000\022@\n\nheatingOff\022\023.smartkitche" +
-      "n.Empty\032\033.smartkitchen.heatingStatus\"\000B9" +
-      "\n\035com.matthewmurphy.smartcookerB\026SmartKi" +
-      "tchenCookerImplP\001b\006proto3"
+      "\n\014cooker.proto\022\014smartkitchen\"(\n\020statusOf" +
+      "Switches\022\024\n\014switchStatus\030\001 \001(\010\"%\n\rheatin" +
+      "gStatus\022\024\n\014heatingONOFF\030\001 \001(\010\"\007\n\005Empty2\227" +
+      "\002\n\013smartCooker\022A\n\010switchOn\022\023.smartkitche" +
+      "n.Empty\032\036.smartkitchen.statusOfSwitches\"" +
+      "\000\022B\n\tswitchOff\022\023.smartkitchen.Empty\032\036.sm" +
+      "artkitchen.statusOfSwitches\"\000\022?\n\theating" +
+      "On\022\023.smartkitchen.Empty\032\033.smartkitchen.h" +
+      "eatingStatus\"\000\022@\n\nheatingOff\022\023.smartkitc" +
+      "hen.Empty\032\033.smartkitchen.heatingStatus\"\000" +
+      "B9\n\035com.matthewmurphy.smartcookerB\026Smart" +
+      "KitchenCookerImplP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -69,13 +68,13 @@ public final class SmartKitchenCookerImpl {
     internal_static_smartkitchen_statusOfSwitches_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_smartkitchen_statusOfSwitches_descriptor,
-        new java.lang.String[] { "SwitchStatus", "StatusMsg", });
+        new java.lang.String[] { "SwitchStatus", });
     internal_static_smartkitchen_heatingStatus_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_smartkitchen_heatingStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_smartkitchen_heatingStatus_descriptor,
-        new java.lang.String[] { "HeatingONOFF", "StatusMsg", });
+        new java.lang.String[] { "HeatingONOFF", });
     internal_static_smartkitchen_Empty_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_smartkitchen_Empty_fieldAccessorTable = new

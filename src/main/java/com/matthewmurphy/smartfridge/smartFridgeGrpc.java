@@ -156,21 +156,21 @@ public final class smartFridgeGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.matthewmurphy.smartfridge.itemsInFridge,
-      com.matthewmurphy.smartfridge.numResponse> getFridgeItemsMethod;
+      com.matthewmurphy.smartfridge.itemsResponse> getFridgeItemsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "fridgeItems",
       requestType = com.matthewmurphy.smartfridge.itemsInFridge.class,
-      responseType = com.matthewmurphy.smartfridge.numResponse.class,
+      responseType = com.matthewmurphy.smartfridge.itemsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
   public static io.grpc.MethodDescriptor<com.matthewmurphy.smartfridge.itemsInFridge,
-      com.matthewmurphy.smartfridge.numResponse> getFridgeItemsMethod() {
-    io.grpc.MethodDescriptor<com.matthewmurphy.smartfridge.itemsInFridge, com.matthewmurphy.smartfridge.numResponse> getFridgeItemsMethod;
+      com.matthewmurphy.smartfridge.itemsResponse> getFridgeItemsMethod() {
+    io.grpc.MethodDescriptor<com.matthewmurphy.smartfridge.itemsInFridge, com.matthewmurphy.smartfridge.itemsResponse> getFridgeItemsMethod;
     if ((getFridgeItemsMethod = smartFridgeGrpc.getFridgeItemsMethod) == null) {
       synchronized (smartFridgeGrpc.class) {
         if ((getFridgeItemsMethod = smartFridgeGrpc.getFridgeItemsMethod) == null) {
           smartFridgeGrpc.getFridgeItemsMethod = getFridgeItemsMethod = 
-              io.grpc.MethodDescriptor.<com.matthewmurphy.smartfridge.itemsInFridge, com.matthewmurphy.smartfridge.numResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.matthewmurphy.smartfridge.itemsInFridge, com.matthewmurphy.smartfridge.itemsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(
                   "smartkitchen.smartFridge", "fridgeItems"))
@@ -178,7 +178,7 @@ public final class smartFridgeGrpc {
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.matthewmurphy.smartfridge.itemsInFridge.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.matthewmurphy.smartfridge.numResponse.getDefaultInstance()))
+                  com.matthewmurphy.smartfridge.itemsResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new smartFridgeMethodDescriptorSupplier("fridgeItems"))
                   .build();
           }
@@ -245,7 +245,7 @@ public final class smartFridgeGrpc {
     /**
      */
     public io.grpc.stub.StreamObserver<com.matthewmurphy.smartfridge.itemsInFridge> fridgeItems(
-        io.grpc.stub.StreamObserver<com.matthewmurphy.smartfridge.numResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.matthewmurphy.smartfridge.itemsResponse> responseObserver) {
       return asyncUnimplementedStreamingCall(getFridgeItemsMethod(), responseObserver);
     }
 
@@ -284,7 +284,7 @@ public final class smartFridgeGrpc {
             asyncBidiStreamingCall(
               new MethodHandlers<
                 com.matthewmurphy.smartfridge.itemsInFridge,
-                com.matthewmurphy.smartfridge.numResponse>(
+                com.matthewmurphy.smartfridge.itemsResponse>(
                   this, METHODID_FRIDGE_ITEMS)))
           .build();
     }
@@ -343,7 +343,7 @@ public final class smartFridgeGrpc {
     /**
      */
     public io.grpc.stub.StreamObserver<com.matthewmurphy.smartfridge.itemsInFridge> fridgeItems(
-        io.grpc.stub.StreamObserver<com.matthewmurphy.smartfridge.numResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.matthewmurphy.smartfridge.itemsResponse> responseObserver) {
       return asyncBidiStreamingCall(
           getChannel().newCall(getFridgeItemsMethod(), getCallOptions()), responseObserver);
     }
@@ -498,7 +498,7 @@ public final class smartFridgeGrpc {
       switch (methodId) {
         case METHODID_FRIDGE_ITEMS:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.fridgeItems(
-              (io.grpc.stub.StreamObserver<com.matthewmurphy.smartfridge.numResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.matthewmurphy.smartfridge.itemsResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
